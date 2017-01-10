@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'rb-appscript', :require => 'appscript'
+gem 'rb-scpt'
+gem 'activesupport', :require => false
 gem 'pry'

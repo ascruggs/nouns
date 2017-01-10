@@ -5,6 +5,7 @@ module Nouns
     class Meeting
 
       DIR = "/Users/aascruggs/Dropbox/Documents/Meetings"
+      COLUMNS = ['name', 'notes', 'creation_date', 'completion_date','status',  'id']
 
       attr_accessor :project
 
@@ -42,7 +43,7 @@ module Nouns
         CSV.open(file, "w") do |csv|
           csv << Nouns::Things::Todo::COLUMNS
           csv_records.each do |csv_record|
-            csv << Nouns::Things::Todo::COLUMNS.map{|attribute| csv_record[attribute]}
+            csv << Nouns::Syncer::Meeting::COLUMNS.map{|attribute| csv_record[attribute]}
           end
         end
       end
