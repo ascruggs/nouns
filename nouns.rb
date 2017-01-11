@@ -22,7 +22,7 @@ require './lib/nouns/syncer/meeting.rb'
 
 require './lib/nouns/stats.rb'
 
-binding.pry
-
 Nouns::Syncer::People.sync!
 Nouns::Syncer::Meeting.sync!
+
+puts Nouns::Stats.table
